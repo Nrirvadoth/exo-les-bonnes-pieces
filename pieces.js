@@ -54,3 +54,22 @@ boutonFiltrer.addEventListener("click", function () {
    });
    console.log(piecesFiltrees);
 }) ;
+
+const boutonTrierDecroissant = document.querySelector(".btn-trier-decroissant");
+
+boutonTrierDecroissant.addEventListener("click", function () {
+    const piecesOrdonneesDecroissant = Array.from(pieces);
+    piecesOrdonneesDecroissant.sort(function (a, b) {
+        return b.prix - a.prix;
+     });
+     console.log(piecesOrdonneesDecroissant);
+});
+
+const boutonFiltrerDescription = document.querySelector(".btn-filtre-description");
+
+boutonFiltrerDescription.addEventListener("click", function () {
+   const piecesDecrites = pieces.filter(function (piece) {
+       return piece.description;
+   });
+   console.log(piecesDecrites);
+}) ;
